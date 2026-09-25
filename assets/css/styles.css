@@ -529,6 +529,65 @@ a:hover {
   font-weight: 600;
 }
 
+/* Capability Grid within practice areas */
+.capability-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .capability-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+  }
+}
+
+.capability-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  padding: var(--space-md) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--duration) var(--ease-out),
+              background-color var(--duration) var(--ease-out);
+}
+
+.capability-box:hover {
+  border-color: var(--brass);
+  background-color: #ffffff;
+}
+
+.capability-title {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  line-height: 1.35;
+}
+
+.capability-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: var(--brass);
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.capability-desc {
+  font-size: 0.8125rem !important;
+  line-height: 1.6 !important;
+  color: var(--text-muted) !important;
+  margin: 0 !important;
+}
+
 /* Delivery detail line */
 .service-detail {
   font-size: 0.8125rem;
