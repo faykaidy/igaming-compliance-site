@@ -63,9 +63,9 @@ body {
   line-height: 1.7;
   color: var(--text);
   background-color: var(--paper);
-  /* Dot grid pattern — reinforces engineering/systems brand */
+  /* Distinct dot grid pattern — reinforces engineering/systems brand */
   background-image:
-    radial-gradient(circle, rgba(28, 35, 49, 0.08) 1px, transparent 1px);
+    radial-gradient(circle, rgba(28, 35, 49, 0.12) 1.2px, transparent 1.2px);
   background-size: 24px 24px;
   background-position: 0 0;
 }
@@ -327,45 +327,16 @@ a:hover {
 .hero {
   padding-top: calc(var(--header-height) + var(--space-4xl));
   padding-bottom: var(--space-4xl);
-  background-color: var(--paper);
   border-bottom: 1px solid var(--line);
   position: relative;
   overflow: hidden;
-}
-
-/* Soft gold radial glow behind hero — draws the eye to headline */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 5%;
-  left: -5%;
-  width: 650px;
-  height: 650px;
-  background: radial-gradient(
-    circle,
-    rgba(166, 129, 60, 0.16) 0%,
-    rgba(166, 129, 60, 0.06) 45%,
-    transparent 70%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Second, smaller warm glow for depth */
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -15%;
-  right: -5%;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(
-    circle,
-    rgba(166, 129, 60, 0.12) 0%,
-    transparent 65%
-  );
-  pointer-events: none;
-  z-index: 0;
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(circle at 18% 28%, rgba(166, 129, 60, 0.26) 0%, rgba(166, 129, 60, 0.08) 40%, transparent 65%),
+    radial-gradient(circle at 82% 72%, rgba(166, 129, 60, 0.16) 0%, transparent 50%),
+    radial-gradient(circle, rgba(28, 35, 49, 0.12) 1.2px, transparent 1.2px);
+  background-size: 100% 100%, 100% 100%, 24px 24px;
+  background-position: 0 0, 0 0, 0 0;
 }
 
 .hero-content {
@@ -456,7 +427,7 @@ a:hover {
    ============================================================ */
 .services {
   padding: var(--space-5xl) 0;
-  background-color: var(--paper);
+  background-color: transparent;
 }
 
 .services-header {
@@ -647,7 +618,9 @@ a:hover {
    ============================================================ */
 .about {
   padding: var(--space-5xl) 0;
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
