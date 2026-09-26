@@ -13,8 +13,8 @@
   --line:       #D8D3C7;
   --signal:     #8B3A2F;
   --white:      #ffffff;
-  --text:       #3A3F4B;
-  --text-muted: #6B6E76;
+  --text:       #374151;
+  --text-muted: #4B5563;
 
   /* Typography */
   --font-heading: 'Source Serif 4', 'Georgia', serif;
@@ -143,10 +143,11 @@ a:hover {
   letter-spacing: 0.03em;
   padding: 0.875rem 1.75rem;
   border: none;
-  border-radius: 0;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color var(--duration) var(--ease-out),
-              color var(--duration) var(--ease-out);
+              color var(--duration) var(--ease-out),
+              transform var(--duration) var(--ease-out);
   text-decoration: none;
 }
 
@@ -259,6 +260,15 @@ a:hover {
   padding: 0.625rem 1.25rem !important;
   text-transform: uppercase !important;
   letter-spacing: 0.06em !important;
+  background-color: var(--brass) !important;
+  color: var(--white) !important;
+  border-radius: 6px !important;
+}
+
+.nav-cta:hover {
+  background-color: var(--brass-dark) !important;
+  color: var(--white) !important;
+  transform: translateY(-1px);
 }
 
 /* Mobile nav toggle */
@@ -403,7 +413,7 @@ a:hover {
 
 
 /* ============================================================
-   SERVICES — Numbered ruled list (not a card grid)
+   SERVICES — Editorial Split + Accordion
    ============================================================ */
 .services {
   padding: var(--space-5xl) 0;
@@ -414,61 +424,53 @@ a:hover {
   margin-bottom: var(--space-3xl);
 }
 
-.services-header .section-subtext {
-  /* Left-aligned, not centered */
-}
-
-/* Replace grid with sequential list */
-.services-grid {
+/* Vertical list of practice areas */
+.services-list {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--line);
 }
 
-/* Each service item: ruled, numbered */
-.service-card {
+/* Each practice area row: two-column editorial split */
+.service-row {
   display: grid;
-  grid-template-columns: 48px 1fr;
-  grid-template-rows: auto auto;
-  gap: 0 var(--space-lg);
+  grid-template-columns: 280px 1fr;
+  gap: 0 var(--space-3xl);
   padding: var(--space-2xl) 0;
-  border-bottom: 1px solid var(--line);
-  background: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
+  border-top: 1px solid var(--line);
   position: relative;
 }
 
-/* Remove all hover effects — restraint */
-.service-card:hover {
-  border-color: var(--line);
-  box-shadow: none;
-  transform: none;
+.service-row:last-child {
+  border-bottom: 1px solid var(--line);
 }
 
-/* Step number */
-.service-card::before {
-  content: counter(service-counter, decimal-leading-zero);
-  counter-increment: service-counter;
+/* Left column: number + heading */
+.service-row-left {
+  position: relative;
+}
+
+.service-number {
+  display: block;
   font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 3.5rem;
+  font-weight: 700;
   color: var(--brass);
-  grid-row: 1 / -1;
-  padding-top: 0.15em;
+  opacity: 0.15;
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.03em;
 }
 
-.services-grid {
-  counter-reset: service-counter;
+.service-row h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
-/* Hide old icon SVGs */
-.service-card-icon {
-  display: none;
-}
-
-/* "Start here" badge — uses Signal red, only on first item */
+/* "Start here" badge */
 .service-card-badge {
   display: inline-block;
   font-size: 0.625rem;
@@ -477,86 +479,100 @@ a:hover {
   text-transform: uppercase;
   color: var(--signal);
   background: none;
-  padding: 0;
+  padding: 0 0 2px 0;
   border-radius: 0;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
   border-bottom: 1px solid var(--signal);
-  padding-bottom: 2px;
 }
 
-.service-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: var(--space-sm);
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-}
-
-.service-card p {
+/* Right column: description + accordion */
+.service-row-right p {
   font-size: 0.9375rem;
-  line-height: 1.75;
-  color: var(--text-muted);
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: var(--space-md);
 }
 
-.service-bullets {
-  list-style: none;
-  margin: var(--space-md) 0 var(--space-sm) 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
-
-.service-bullets li {
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  color: var(--text-muted);
-  position: relative;
-  padding-left: 1.25rem;
-}
-
-.service-bullets li strong {
-  color: var(--ink);
+/* Toggle button */
+.capability-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
   font-weight: 600;
-}
-
-.service-bullets li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
   color: var(--brass);
-  font-weight: 600;
+  padding: var(--space-xs) 0;
+  transition: color var(--duration) var(--ease-out);
 }
 
-/* Capability Grid within practice areas */
-.capability-grid {
+.capability-toggle:hover {
+  color: var(--brass-dark);
+}
+
+.toggle-chevron {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform var(--duration) var(--ease-out);
+}
+
+.capability-toggle[aria-expanded="true"] .toggle-chevron {
+  transform: rotate(180deg);
+}
+
+.capability-toggle[aria-expanded="true"] .toggle-text::after {
+  content: none;
+}
+
+/* Collapsible panel */
+.capability-panel {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-md);
-  margin-top: var(--space-md);
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s var(--ease-out),
+              opacity 0.3s var(--ease-out),
+              margin-top 0.3s var(--ease-out);
+  opacity: 0;
+  margin-top: 0;
 }
 
-@media (min-width: 640px) {
-  .capability-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: var(--space-md);
-  }
+.capability-panel.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: var(--space-lg);
 }
 
-.capability-box {
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--line);
-  padding: var(--space-md) var(--space-md);
+.capability-panel > * {
+  overflow: hidden;
+}
+
+/* Individual capability item */
+.capability-item {
   display: flex;
-  flex-direction: column;
-  transition: border-color var(--duration) var(--ease-out),
-              background-color var(--duration) var(--ease-out);
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.capability-box:hover {
-  border-color: var(--brass);
-  background-color: #ffffff;
+.capability-item:last-child {
+  border-bottom: none;
+}
+
+/* SVG icon next to capability title */
+.capability-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  stroke: var(--brass);
+  fill: none;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .capability-title {
@@ -564,29 +580,18 @@ a:hover {
   font-size: 0.8125rem;
   font-weight: 700;
   color: var(--ink);
-  margin-bottom: 0.35rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.45rem;
+  margin-bottom: 0.2rem;
+  display: block;
   line-height: 1.35;
-}
-
-.capability-title::before {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  background-color: var(--brass);
-  margin-top: 5px;
-  flex-shrink: 0;
 }
 
 .capability-desc {
   font-size: 0.8125rem !important;
   line-height: 1.6 !important;
-  color: var(--text-muted) !important;
+  color: var(--text) !important;
   margin: 0 !important;
 }
+
 
 /* Delivery detail line */
 .service-detail {
@@ -907,10 +912,13 @@ a:hover {
     padding: var(--space-3xl) 0;
   }
 
-  .service-card {
-    grid-template-columns: 36px 1fr;
-    gap: 0 var(--space-md);
-    padding: var(--space-xl) 0;
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .service-number {
+    font-size: 2.5rem;
   }
 
   .about {

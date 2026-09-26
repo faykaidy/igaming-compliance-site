@@ -104,7 +104,7 @@
 
 
     <!-- ============================================================
-         CORE PRACTICE AREAS — Numbered Ruled List
+         CORE PRACTICE AREAS — Editorial Split + Accordion
          ============================================================ -->
     <section class="services" id="practice-areas">
       <div class="container">
@@ -116,116 +116,190 @@
           </p>
         </div>
 
-        <div class="services-grid services-list">
+        <div class="services-list">
 
           <!-- 01 — Payment Risk, Fraud Prevention & Acquirer Onboarding -->
-          <article class="service-card" id="practice-payment-risk">
-            <div>
+          <article class="service-row" id="practice-payment-risk">
+            <div class="service-row-left">
+              <span class="service-number">01</span>
               <span class="service-card-badge">Start here</span>
               <h3>Payment Risk, Fraud Prevention &amp; Acquirer Onboarding</h3>
+            </div>
+            <div class="service-row-right">
               <p>
                 Securing processing rails and protecting merchant reserves requires demonstrable operational control. We configure end-to-end anti-fraud and merchant-readiness frameworks tailored to passing Tier-1 acquiring bank underwriting.
               </p>
-              <div class="capability-grid">
-                <div class="capability-box">
-                  <span class="capability-title">Chargeback &amp; Payment Fraud Mitigation</span>
-                  <p class="capability-desc">Rapid velocity thresholds, BIN routing checks, mismatched billing data alerts, and stolen-card testing prevention.</p>
+              <button class="capability-toggle" aria-expanded="false" aria-controls="caps-01">
+                <span class="toggle-text">View capabilities</span>
+                <svg class="toggle-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="capability-panel" id="caps-01">
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <div>
+                    <span class="capability-title">Chargeback &amp; Payment Fraud Mitigation</span>
+                    <p class="capability-desc">Rapid velocity thresholds, BIN routing checks, mismatched billing data alerts, and stolen-card testing prevention.</p>
+                  </div>
                 </div>
-                <div class="capability-box">
-                  <span class="capability-title">PSP Due Diligence Dossiers</span>
-                  <p class="capability-desc">Comprehensive AML/CFT documentation, Customer Acceptance Policies (CAP), and operational SAR logging templates built for acquirer risk teams.</p>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  <div>
+                    <span class="capability-title">PSP Due Diligence Dossiers</span>
+                    <p class="capability-desc">Comprehensive AML/CFT documentation, Customer Acceptance Policies (CAP), and operational SAR logging templates built for acquirer risk teams.</p>
+                  </div>
                 </div>
-                <div class="capability-box">
-                  <span class="capability-title">Deposit-to-Withdrawal Parity</span>
-                  <p class="capability-desc">Closed-loop payout rules and source-of-funds trigger points to stop payment cycling and card laundering.</p>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                  <div>
+                    <span class="capability-title">Deposit-to-Withdrawal Parity</span>
+                    <p class="capability-desc">Closed-loop payout rules and source-of-funds trigger points to stop payment cycling and card laundering.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </article>
 
           <!-- 02 — Game Integrity, Slot Mechanics & Bonus Abuse Assessment -->
-          <article class="service-card" id="practice-game-integrity">
-            <div>
+          <article class="service-row" id="practice-game-integrity">
+            <div class="service-row-left">
+              <span class="service-number">02</span>
               <h3>Game Integrity, Slot Mechanics &amp; Bonus Abuse Assessment</h3>
+            </div>
+            <div class="service-row-right">
               <p>
                 Promotional loopholes and game engine exploits can drain up to 20% of an operator's marketing budget. We perform systematic risk assessments to protect your platform margins against coordinated syndicates.
               </p>
-              <div class="capability-grid">
-                <div class="capability-box">
-                  <span class="capability-title">Slot &amp; Game Exploit Audits</span>
-                  <p class="capability-desc">Identifying game mechanic vulnerabilities (e.g., feature-buy abuse, delayed round completion, bot farming, RTP manipulation patterns).</p>
+              <button class="capability-toggle" aria-expanded="false" aria-controls="caps-02">
+                <span class="toggle-text">View capabilities</span>
+                <svg class="toggle-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="capability-panel" id="caps-02">
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <div>
+                    <span class="capability-title">Slot &amp; Game Exploit Audits</span>
+                    <p class="capability-desc">Identifying game mechanic vulnerabilities (e.g., feature-buy abuse, delayed round completion, bot farming, RTP manipulation patterns).</p>
+                  </div>
                 </div>
-                <div class="capability-box">
-                  <span class="capability-title">Bonus &amp; Promo Abuse Prevention</span>
-                  <p class="capability-desc">Strategy design to eliminate multi-accounting for no-deposit bonuses, cross-betting, and low-risk wagering cycle schemes.</p>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                  <div>
+                    <span class="capability-title">Bonus &amp; Promo Abuse Prevention</span>
+                    <p class="capability-desc">Strategy design to eliminate multi-accounting for no-deposit bonuses, cross-betting, and low-risk wagering cycle schemes.</p>
+                  </div>
                 </div>
-                <div class="capability-box">
-                  <span class="capability-title">Network &amp; Syndicate Detection</span>
-                  <p class="capability-desc">Implementing behavioral telemetry, shared device fingerprint clustering, and IP/proxy risk scoring at registration before bonuses are credited.</p>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <div>
+                    <span class="capability-title">Network &amp; Syndicate Detection</span>
+                    <p class="capability-desc">Implementing behavioral telemetry, shared device fingerprint clustering, and IP/proxy risk scoring at registration before bonuses are credited.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </article>
 
           <!-- 03 — Back Office (BO) Risk Controls & Workflow Architecture -->
-          <article class="service-card" id="practice-back-office">
-            <div>
+          <article class="service-row" id="practice-back-office">
+            <div class="service-row-left">
+              <span class="service-number">03</span>
               <h3>Back Office (BO) Risk Controls &amp; Workflow Architecture</h3>
+            </div>
+            <div class="service-row-right">
               <p>
-                An operator’s back office is the frontline defense. We audit and structure internal administrative tools to eliminate operational blind spots, internal collusion, and manual handling delays.
+                An operator's back office is the frontline defense. We audit and structure internal administrative tools to eliminate operational blind spots, internal collusion, and manual handling delays.
               </p>
-              <div class="capability-grid">
-                <div class="capability-box">
-                  <span class="capability-title">Back Office Role &amp; Permission Hierarchy</span>
-                  <p class="capability-desc">Granular RBAC (Role-Based Access Control) to separate cashier approvals, player data access, and manual balance adjustments.</p>
+              <button class="capability-toggle" aria-expanded="false" aria-controls="caps-03">
+                <span class="toggle-text">View capabilities</span>
+                <svg class="toggle-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="capability-panel" id="caps-03">
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  <div>
+                    <span class="capability-title">Back Office Role &amp; Permission Hierarchy</span>
+                    <p class="capability-desc">Granular RBAC (Role-Based Access Control) to separate cashier approvals, player data access, and manual balance adjustments.</p>
+                  </div>
                 </div>
-                <div class="capability-box">
-                  <span class="capability-title">Manual Review &amp; Escalation Queues</span>
-                  <p class="capability-desc">Concrete SOPs for risk agents handling suspicious bet spikes, multi-account links, and manual redemption approvals.</p>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                  <div>
+                    <span class="capability-title">Manual Review &amp; Escalation Queues</span>
+                    <p class="capability-desc">Concrete SOPs for risk agents handling suspicious bet spikes, multi-account links, and manual redemption approvals.</p>
+                  </div>
                 </div>
-                <div class="capability-box">
-                  <span class="capability-title">Audit Trails &amp; Activity Logs</span>
-                  <p class="capability-desc">Implementing immutable logging for all administrative balance edits, KYC overrides, and payout releases.</p>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                  <div>
+                    <span class="capability-title">Audit Trails &amp; Activity Logs</span>
+                    <p class="capability-desc">Implementing immutable logging for all administrative balance edits, KYC overrides, and payout releases.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </article>
 
           <!-- 04 — RegTech Pipeline Architecture & API Integration -->
-          <article class="service-card" id="practice-regtech-pipeline">
-            <div>
+          <article class="service-row" id="practice-regtech-pipeline">
+            <div class="service-row-left">
+              <span class="service-number">04</span>
               <h3>RegTech Pipeline Architecture &amp; API Integration</h3>
+            </div>
+            <div class="service-row-right">
               <p>
                 Translating regulatory and risk logic into backend developer tickets. We design and fine-tune your identity verification, AML screening, and fraud prevention tech stack.
               </p>
-              <div class="capability-grid">
-                <div class="capability-box">
-                  <span class="capability-title">Vendor Calibration</span>
-                  <p class="capability-desc">Configuration of engines such as Sumsub, Veriff, SEON, or ComplyAdvantage.</p>
+              <button class="capability-toggle" aria-expanded="false" aria-controls="caps-04">
+                <span class="toggle-text">View capabilities</span>
+                <svg class="toggle-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="capability-panel" id="caps-04">
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                  <div>
+                    <span class="capability-title">Vendor Calibration</span>
+                    <p class="capability-desc">Configuration of engines such as Sumsub, Veriff, SEON, or ComplyAdvantage.</p>
+                  </div>
                 </div>
-                <div class="capability-box">
-                  <span class="capability-title">Automated Rule Logic</span>
-                  <p class="capability-desc">Tuning velocity limits, proxy/VPN detection, emulator checks, and synthetic identity flags to stop fraudsters without crushing legitimate player conversion.</p>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                  <div>
+                    <span class="capability-title">Automated Rule Logic</span>
+                    <p class="capability-desc">Tuning velocity limits, proxy/VPN detection, emulator checks, and synthetic identity flags to stop fraudsters without crushing legitimate player conversion.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </article>
 
           <!-- 05 — Sweepstakes & Dual-Currency Governance -->
-          <article class="service-card" id="practice-sweepstakes-governance">
-            <div>
+          <article class="service-row" id="practice-sweepstakes-governance">
+            <div class="service-row-left">
+              <span class="service-number">05</span>
               <h3>Sweepstakes &amp; Dual-Currency Governance</h3>
+            </div>
+            <div class="service-row-right">
               <p>
                 Specialized operational frameworks for North American social/sweepstakes platforms (Gold Coins / Sweeps Coins) and offshore licensing models (Curaçao, Anjouan).
               </p>
-              <div class="capability-grid">
-                <div class="capability-box">
-                  <span class="capability-title">Sweepstakes Integrity</span>
-                  <p class="capability-desc">Rigorous Alternative Method of Entry (AMOE) processing, strict geofencing controls, and tiered prize-redemption KYC workflows.</p>
+              <button class="capability-toggle" aria-expanded="false" aria-controls="caps-05">
+                <span class="toggle-text">View capabilities</span>
+                <svg class="toggle-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="capability-panel" id="caps-05">
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                  <div>
+                    <span class="capability-title">Sweepstakes Integrity</span>
+                    <p class="capability-desc">Rigorous Alternative Method of Entry (AMOE) processing, strict geofencing controls, and tiered prize-redemption KYC workflows.</p>
+                  </div>
                 </div>
-                <div class="capability-box">
-                  <span class="capability-title">On-Chain Risk Controls</span>
-                  <p class="capability-desc">Crypto deposit provenance checks, mixer detection, and wallet screening for crypto-first operators.</p>
+                <div class="capability-item">
+                  <svg class="capability-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                  <div>
+                    <span class="capability-title">On-Chain Risk Controls</span>
+                    <p class="capability-desc">Crypto deposit provenance checks, mixer detection, and wallet screening for crypto-first operators.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -317,7 +391,7 @@
       <p class="footer-copy">&copy; 2026 Anchor Compliance Advisory. All rights reserved.</p>
       <ul class="footer-links" role="list">
         <li>
-          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (coming soon)">
+          <a href="https://www.linkedin.com/company/anchor-compliance-advisory" target="_blank" rel="noopener noreferrer" aria-label="Anchor Compliance Advisory on LinkedIn">
             LinkedIn
           </a>
         </li>
@@ -395,6 +469,23 @@
           }
         }, { passive: true });
       }
+
+      /* --- Capability accordion toggles --- */
+      document.querySelectorAll('.capability-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var panelId = btn.getAttribute('aria-controls');
+          var panel = document.getElementById(panelId);
+          if (!panel) return;
+
+          var isOpen = panel.classList.toggle('is-open');
+          btn.setAttribute('aria-expanded', isOpen);
+
+          var textEl = btn.querySelector('.toggle-text');
+          if (textEl) {
+            textEl.textContent = isOpen ? 'Hide capabilities' : 'View capabilities';
+          }
+        });
+      });
 
     })();
   </script>
