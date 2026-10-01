@@ -403,8 +403,15 @@ h1 {
 
 .sheet .meta {
   font-size: .95rem;
-  opacity: .75;
   margin-bottom: 1rem;
+}
+
+.sheet.dark .meta {
+  color: #C9D2CC;
+}
+
+.sheet.light .meta {
+  color: var(--muted);
 }
 
 .sheet ul {
@@ -417,6 +424,18 @@ h1 {
 
 .sheet mark {
   color: var(--ink);
+}
+
+.sheet.dark mark {
+  background: #F3DE4F;
+  color: #16212B;
+  padding: .1em .45em;
+  border-radius: 3px;
+  font-weight: 600;
+  opacity: 1;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  line-height: 1.9;
 }
 
 .note {
