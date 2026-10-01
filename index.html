@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#EDF1EA">
-<title>Anchor Compliance Advisory — Merchant application readiness for sweepstakes platforms</title>
-<meta name="description" content="We prepare the documents, controls and procedures acquirers ask for before approving a high-risk merchant application.">
+<title>Anchor Compliance Advisory — Get your sweepstakes platform ready for a merchant account</title>
+<meta name="description" content="We prepare the documents, controls and procedures acquirers look for before approving a high-risk merchant application.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,700;1,6..72,500&family=Source+Serif+4:wght@700&display=swap" rel="stylesheet">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/css/styles.css?v=8.0">
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 <header>
@@ -18,7 +18,7 @@
     <a class="brand" href="#top" aria-label="Anchor Compliance Advisory — home">
       <svg class="mark" viewBox="20 30 280 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <text x="40" y="140" font-family="'Source Serif 4', Georgia, serif" font-size="120" font-weight="700" fill="#1C2331">A</text>
-        <text x="128" y="130" font-family="'Source Serif 4', Georgia, serif" font-size="120" font-weight="700" fill="#7A5C24">C</text>
+        <text x="128" y="130" font-family="'Source Serif 4', Georgia, serif" font-size="120" font-weight="700" fill="#A6813C">C</text>
         <text x="214" y="140" font-family="'Source Serif 4', Georgia, serif" font-size="120" font-weight="700" fill="#1C2331">A</text>
       </svg>
       <span class="brand-text">Anchor Compliance Advisory</span>
@@ -28,9 +28,9 @@
       <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
     <nav id="menu" aria-label="Primary">
-      <a href="#declines">Why declined</a>
       <a href="#work">What we do</a>
-      <a href="#about">About</a>
+      <a href="#process">How it works</a>
+      <a href="#contact">Contact</a>
       <a class="btn" href="#contact">Book a call</a>
     </nav>
   </div>
@@ -39,114 +39,81 @@
 <main id="top">
   <section class="hero">
     <div class="wrap">
-      <div>
+      <div class="hero-text">
         <h1>Most merchant applications are declined for reasons you can fix first.</h1>
-        <p class="lede">We prepare the documents, controls and procedures that acquirers look for before approving a high-risk sweepstakes application. Led by Mohamed Lefi, 10+ years in iGaming compliance.</p>
+        <p class="lede">We prepare the documents, controls and procedures that acquirers look for before approving a high-risk sweepstakes application. Tick what you already have and see how an underwriter might read your file.</p>
         <div class="actions">
           <a class="btn" href="#contact">Book an intro call</a>
-          <a class="btn ghost" href="#work">See what we deliver</a>
+          <a class="btn ghost" href="#work">See what we do</a>
         </div>
       </div>
-      <div>
-        <div class="letter" role="img" aria-label="Illustrative merchant decline letter with four reasons highlighted">
-          <span class="stamp">DECLINED</span>
-          <div class="re">Re: Merchant application — Status: declined</div>
-          We are unable to proceed. Reasons:
-          <ol>
-            <li><mark>Terms do not describe a sweepstakes model or free entry method.</mark></li>
-            <li><mark>No documented device, velocity or multi-account controls.</mark></li>
-            <li><mark>No chargeback procedure or dispute thresholds.</mark></li>
-            <li><mark>Beneficial ownership not documented.</mark></li>
-          </ol>
-        </div>
-        <p class="caption">Illustrative example, not a real client's letter. Each highlighted line maps to work below.</p>
+      <div class="hero-file">
+        <form class="letter" id="check" onsubmit="return false" aria-labelledby="check-h">
+          <span class="stamp" id="stamp" aria-live="polite">DECLINED</span>
+          <h2 id="check-h">Your application file</h2>
+          <p class="hint">Tick everything you already have in place.</p>
+          <label class="tick"><input type="checkbox" value="Terms written for a sweepstakes model"><span class="box"></span>Terms written for a sweepstakes model</label>
+          <label class="tick"><input type="checkbox" value="A documented free-entry (AMOE) procedure"><span class="box"></span>A documented free-entry (AMOE) procedure</label>
+          <label class="tick"><input type="checkbox" value="Device, velocity and multi-account controls"><span class="box"></span>Device, velocity and multi-account controls</label>
+          <label class="tick"><input type="checkbox" value="A chargeback and dispute plan"><span class="box"></span>A chargeback and dispute plan</label>
+          <label class="tick"><input type="checkbox" value="A clear billing descriptor"><span class="box"></span>A clear billing descriptor</label>
+          <label class="tick"><input type="checkbox" value="Ownership and corporate documents"><span class="box"></span>Ownership and corporate documents</label>
+          <div class="verdict" id="verdict" aria-live="polite"></div>
+        </form>
+        <p class="fine">An illustration, not a score. Acquirers decide, and every case differs.</p>
       </div>
     </div>
   </section>
 
-  <section id="declines" class="paper">
-    <div class="wrap">
-      <h2>What underwriters flag, and what we prepare</h2>
-      <p>Acquirers decline when something doesn't add up. Most of these gaps can be closed before you apply.</p>
-      <div class="causes">
-        <div class="row head"><span>What the underwriter sees</span><span>What we prepare</span></div>
-        <div class="row"><p>Generic terms of service, no free-entry (AMOE) disclosure</p><p class="fix">Sweepstakes-specific terms, rules and AMOE procedure</p></div>
-        <div class="row"><p>No device, velocity or multi-account controls</p><p class="fix">Fraud and KYC/AML requirements your team can build to</p></div>
-        <div class="row"><p>No plan for chargebacks</p><p class="fix">Dispute thresholds, refund triggers and a representment procedure</p></div>
-        <div class="row"><p>Ambiguous billing descriptor</p><p class="fix">A descriptor and customer messaging that match the product</p></div>
-        <div class="row"><p>Incomplete ownership and corporate documents</p><p class="fix">An ownership structure and KYC pack ready to submit</p></div>
-        <div class="row"><p>New entity with no processing history</p><p class="fix">Projections and risk modeling that explain the business plainly</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="work">
+  <section id="work" class="paper">
     <div class="wrap">
       <h2>Two ways to work together</h2>
-      <div class="two">
-        <div>
-          <h3>Launch readiness</h3>
-          <p class="meta">Fixed scope &middot; 6–8 weeks &middot; Scoped on an initial call</p>
-          <p>We review your platform, close the gaps, and assemble the application package.</p>
-          <ul>
-            <li>Platform and controls review</li>
-            <li>Sweepstakes terms, rules and AMOE logging</li>
-            <li>Fraud, KYC/AML and chargeback procedures</li>
-            <li>Go-live runbook</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Ongoing support</h3>
-          <p class="meta">Monthly retainer &middot; After launch</p>
-          <p>Senior oversight without hiring a full-time head of risk.</p>
-          <ul>
-            <li>Regulatory monitoring</li>
-            <li>Chargeback and dispute review</li>
-            <li>KYC and fraud rule reviews</li>
-            <li>Preparation for acquirer conversations</li>
-          </ul>
-        </div>
+      <div class="sheet dark">
+        <h3>Launch readiness</h3>
+        <p class="meta">Fixed scope &middot; about <mark>6–8</mark> weeks &middot; <mark>scoped on an intro call</mark></p>
+        <p>We review your platform, close the gaps and assemble the application package.</p>
+        <ul>
+          <li>Sweepstakes terms, rules and free-entry logging</li>
+          <li>Fraud, KYC/AML and chargeback procedures</li>
+          <li>Corporate, ownership and risk documents</li>
+          <li>A go-live runbook for day one</li>
+        </ul>
       </div>
-      <p class="note">We don't guarantee approval. That decision belongs to the acquirer.</p>
-
-      <h2 style="margin-top:4rem">What goes in the application package</h2>
-      <ul class="checks">
-        <li><div><b>A. Corporate and legal documents</b><span>Structure, ownership, licences and opinions from your counsel.</span></div></li>
-        <li><div><b>B. Platform and promotion mechanics</b><span>How entries, currencies and prizes work, in plain terms.</span></div></li>
-        <li><div><b>C. Technical controls and risk mitigation</b><span>Identity, fraud, geolocation and payout controls.</span></div></li>
-        <li><div><b>D. Financial projections and risk modeling</b><span>Volumes, refund and chargeback assumptions.</span></div></li>
-        <li><div><b>E. Operating procedures and runbooks</b><span>Who does what on day one, and when to escalate.</span></div></li>
-      </ul>
-      <p class="small" style="margin-top:1rem">Sample table of contents available on request.</p>
+      <div class="sheet light">
+        <h3>Ongoing support</h3>
+        <p class="meta">Monthly retainer &middot; after launch</p>
+        <p>Senior oversight without hiring a full-time head of risk.</p>
+        <ul>
+          <li>Regulatory monitoring</li>
+          <li>Chargeback and dispute review</li>
+          <li>KYC and fraud rule reviews</li>
+          <li>Preparation for acquirer conversations</li>
+        </ul>
+      </div>
+      <p class="note">We don’t guarantee approval. That decision belongs to the acquirer.</p>
     </div>
   </section>
 
-  <section id="about" class="paper">
-    <div class="wrap about">
-      <div class="photo" aria-hidden="true">
-        <div>
-          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 0.5rem; opacity: 0.6;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          <br>
-          <strong>Mohamed Lefi</strong>
-          <br>
-          <span style="font-size: 0.75rem;">Founder &amp; Principal</span>
-        </div>
-      </div>
-      <div>
-        <h2>Mohamed Lefi, founder</h2>
-        <p>10+ years specializing in regulatory compliance, dual-currency sweepstakes risk architecture, and high-risk merchant underwriting defense.</p>
-        <p>I work directly on every engagement. You talk to the person doing the work.</p>
-        <p class="small"><strong>Jurisdictions &amp; Frameworks:</strong> US Multi-State Sweepstakes (AMOE &amp; State Statutory Rules), UK &amp; Isle of Man (Remote Gambling), Malta (MGA), and Offshore Regimes (Curaçao / LatAm).</p>
-      </div>
+  <section id="process">
+    <div class="wrap">
+      <h2>How an engagement works</h2>
+      <p>Four steps, in this order.</p>
+      <ol class="path">
+        <li><b>Intro call</b><span>We learn about your platform, your jurisdictions and where you are in the process.</span></li>
+        <li><b>Gap review</b><span>We compare your files with what acquirers ask for and send you a written list of gaps.</span></li>
+        <li><b>Build</b><span>We write the terms, procedures and control requirements, and assemble the package.</span></li>
+        <li><b>Handover</b><span>We walk your team and your counsel through everything before you submit.</span></li>
+      </ol>
+      <p class="note" style="margin-top:2.5rem">Your licensed counsel reviews the legal documents. We work alongside them, not in place of them.</p>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="paper">
     <div class="wrap">
       <h2>Tell us where you are in the process</h2>
-      <p>We reply within 1–2 business days.</p>
+      <p>We reply within <mark>1–2</mark> business days.</p>
       <form id="contact-form" action="mailto:anchorcomplianceadvisory@tutamail.com" method="post" enctype="text/plain">
-        <label>Your name<input name="name" id="form-name" required autocomplete="name" placeholder="e.g. Alex Morgan"></label>
+        <label>Your name<input type="text" name="name" id="form-name" required autocomplete="name" placeholder="e.g. Alex Morgan"></label>
         <label>Work email<input type="email" name="email" id="form-email" required autocomplete="email" placeholder="alex@company.com"></label>
         <label>Stage
           <select name="stage" id="form-stage">
@@ -155,7 +122,7 @@
             <option value="Live and need ongoing support">Live and need ongoing support</option>
           </select>
         </label>
-        <label>Jurisdictions and timeline<textarea name="scope" id="form-scope" placeholder="Briefly describe your platform type, target launch date, and jurisdictions..."></textarea></label>
+        <label>Jurisdictions, timeline and gaps<textarea name="scope" id="scope" placeholder="Briefly describe your platform, target timeline, and missing gaps..."></textarea></label>
         <button class="btn" type="submit">Send request</button>
       </form>
       <p class="small" style="margin-top:1rem">Or call / WhatsApp <a href="tel:+21651305466">+216 51 305 466</a> &middot; <a href="mailto:anchorcomplianceadvisory@tutamail.com">anchorcomplianceadvisory@tutamail.com</a></p>
@@ -177,9 +144,15 @@
 
 <script>
 (function(){
-  var b=document.getElementById('menu-btn'), m=document.getElementById('menu');
-  function set(o){m.classList.toggle('open',o);document.body.classList.toggle('menu-open',o);
-    b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Close menu':'Open menu');}
+  /* mobile menu */
+  var b=document.getElementById('menu-btn'),m=document.getElementById('menu');
+  function set(o){
+    if (!m || !b) return;
+    m.classList.toggle('open',o);
+    document.body.classList.toggle('menu-open',o);
+    b.setAttribute('aria-expanded',String(o));
+    b.setAttribute('aria-label',o?'Close menu':'Open menu');
+  }
   if (b && m) {
     b.addEventListener('click',function(){set(!m.classList.contains('open'));});
     m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});
@@ -187,24 +160,77 @@
     window.matchMedia('(min-width:821px)').addEventListener('change',function(e){if(e.matches)set(false);});
   }
 
+  /* the letter: stamp and verdict react to what is ticked */
+  var boxes=[].slice.call(document.querySelectorAll('#check input')),stamp=document.getElementById('stamp'),v=document.getElementById('verdict'),last='';
+  function update(){
+    var miss=boxes.filter(function(x){return !x.checked}).map(function(x){return x.value}),n=boxes.length-miss.length;
+    var s=n===boxes.length?['LOOKS READY','ok']:n>=3?['GAPS REMAIN','mid']:['DECLINED',''];
+    if (stamp) {
+      stamp.textContent=s[0];
+      stamp.className='stamp '+s[1];
+      if(s[0]!==last){
+        stamp.classList.remove('pop');
+        void stamp.offsetWidth; // Trigger reflow for re-animation
+        stamp.classList.add('pop');
+        last=s[0];
+      }
+    }
+    if (v) {
+      if(!miss.length){
+        v.innerHTML='<b>Nothing obvious is missing.</b> Details still decide approvals, so a review is worth it before you submit.<br><a class="btn" href="#contact">Book a review</a>';
+      } else {
+        v.innerHTML='<b>An underwriter would likely ask about:</b><br>'+miss.join('; ')+'.<br><a class="btn" href="#contact" id="send">Send me this gap list</a>';
+        var sendBtn = document.getElementById('send');
+        if (sendBtn) {
+          sendBtn.addEventListener('click',function(){
+            var scopeEl = document.getElementById('scope');
+            if (scopeEl) {
+              scopeEl.value='Gaps from the checklist:\n- '+miss.join('\n- ')+'\n';
+              scopeEl.scrollIntoView({ behavior: 'smooth' });
+              scopeEl.focus();
+            }
+          });
+        }
+      }
+    }
+  }
+  boxes.forEach(function(x){x.addEventListener('change',update);});
+  update();
+
+  /* journey path lights up as you reach each step */
+  var steps=document.querySelectorAll('.path li');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    },{rootMargin:'0px 0px -25% 0px'});
+    steps.forEach(function(s){io.observe(s);});
+  } else {
+    steps.forEach(function(s){s.classList.add('in');});
+  }
+
+  /* Mailto form submission helper */
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      var name = document.getElementById('form-name').value.trim();
-      var email = document.getElementById('form-email').value.trim();
-      var stage = document.getElementById('form-stage').value;
-      var scope = document.getElementById('form-scope').value.trim();
+      var name = document.getElementById('form-name') ? document.getElementById('form-name').value.trim() : '';
+      var email = document.getElementById('form-email') ? document.getElementById('form-email').value.trim() : '';
+      var stage = document.getElementById('form-stage') ? document.getElementById('form-stage').value : '';
+      var scope = document.getElementById('scope') ? document.getElementById('scope').value.trim() : '';
 
-      var subject = encodeURIComponent('Consultation Inquiry: ' + name + ' (' + stage + ')');
+      var subject = encodeURIComponent('Merchant Readiness Consultation: ' + (name || 'Inquiry'));
       var body = encodeURIComponent(
         'Name: ' + name + '\n' +
         'Email: ' + email + '\n' +
-        'Stage: ' + stage + '\n' +
-        'Jurisdictions & Timeline:\n' + (scope || 'N/A') + '\n\n' +
-        'Sent via Anchor Compliance Advisory'
+        'Stage: ' + stage + '\n\n' +
+        'Jurisdictions, Timeline & Gaps:\n' + (scope || 'Not specified') + '\n\n' +
+        '---\nSent from Anchor Compliance Advisory website'
       );
-
       window.location.href = 'mailto:anchorcomplianceadvisory@tutamail.com?subject=' + subject + '&body=' + body;
     });
   }
